@@ -1,0 +1,25 @@
+.publications {
+  padding: 6rem 0;
+}
+
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.publication-item {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.publication-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.publication-venue {
+  color: var(--text-secondary);
+}
