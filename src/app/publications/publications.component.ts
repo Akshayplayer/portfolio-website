@@ -4,7 +4,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
 @Component({
   selector: 'app-publications',
   template: `
-    <section class="publications">
+    <section class="publications" id="publications">
       <h2 class="section-title">Publications</h2>
       <div class="publication-list">
         @for(publication of publications(); track publication.title) {

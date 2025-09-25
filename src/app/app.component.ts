@@ -7,19 +7,24 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PublicationsComponent } from './publications/publications.component';
 import { CompetitionsComponent } from './competitions/competitions.component';
+import { EducationComponent } from './education/education.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   imports: [
+    NavbarComponent,
     FooterComponent,
     HeroComponent,
     AboutComponent,
     ExperienceComponent,
     SkillsComponent,
     PublicationsComponent,
-    CompetitionsComponent
+    CompetitionsComponent,
+    EducationComponent
   ],
   template: `
+    <app-navbar />
     <main>
       <app-hero />
       <app-about />
@@ -27,6 +32,7 @@ import { CompetitionsComponent } from './competitions/competitions.component';
       <app-skills />
       <app-publications />
       <app-competitions />
+      <app-education />
     </main>
     <app-footer />
   `,

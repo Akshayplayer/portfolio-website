@@ -4,7 +4,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
 @Component({
   selector: 'app-competitions',
   template: `
-    <section class="competitions">
+    <section class="competitions" id="competitions">
       <h2 class="section-title">Competitive Achievements</h2>
       <div class="competition-list">
         @for(competition of competitions(); track competition.name) {

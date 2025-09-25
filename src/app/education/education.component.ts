@@ -4,7 +4,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
 @Component({
   selector: 'app-education',
   template: `
-    <section class="education">
+    <section class="education" id="education">
       <h2 class="section-title">Education</h2>
       <div class="education-card">
         <h3>{{ education().degree }}</h3>
