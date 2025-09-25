@@ -11,7 +11,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
       @for(job of experience(); track job.company) {
         <div class="timeline-item" (click)="selectJob(job)">
           <div class="timeline-content">
-            <h3>{{ job.role }}</h3>
+            <div class="job-header">
+              <h3>{{ job.role }}</h3>
+              <span class="dropdown-icon">{{ selectedJob() === job ? '▲' : '▼' }}</span>
+            </div>
             <p class="company">{{ job.company }} - {{ job.location }}</p>
             <p class="date">{{ job.date }}</p>
             @if (selectedJob() === job) {
@@ -80,6 +83,11 @@ import { PortfolioDataService } from '../portfolio-data.service';
       transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     .timeline-content h3 {
       font-size: 1.8rem;
       margin-top: 0;
@@ -110,6 +118,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
       content: '\u2022';
       position: absolute;
       left: 0;
+      color: #007bff;
+    }
+    .dropdown-icon {
+      font-size: 1.5rem;
       color: #007bff;
     }
 `,

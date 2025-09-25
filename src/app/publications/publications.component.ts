@@ -9,7 +9,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
       <div class="publication-list">
         @for(publication of publications(); track publication.title) {
           <div class="publication-card" (click)="selectPublication(publication)">
-            <h3>{{ publication.title }}</h3>
+            <div class="publication-header">
+              <h3>{{ publication.title }}</h3>
+              <span class="dropdown-icon">{{ selectedPublication() === publication ? '▲' : '▼' }}</span>
+            </div>
             @if(selectedPublication() === publication) {
               <p class="event"><i>{{ publication.event }}</i></p>
               <p class="authors">{{ publication.authors }}</p>
@@ -42,6 +45,11 @@ import { PortfolioDataService } from '../portfolio-data.service';
       margin-bottom: 2rem;
       cursor: pointer;
     }
+    .publication-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     .publication-card h3 {
       font-size: 1.6rem;
       margin-top: 0;
@@ -57,6 +65,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .notes {
       font-size: 0.9rem;
       color: #555;
+    }
+    .dropdown-icon {
+      font-size: 1.5rem;
+      color: #007bff;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
