@@ -7,7 +7,7 @@ import { Injectable, signal } from '@angular/core';
 export class PortfolioDataService {
 
   public name = signal('Akshay Ku Bothra');
-  public major = signal('Major in Civil Engineering, Specialization in Engineering Entrepreneurship');
+  public major = signal('Software engineer and data science enthusiast');
   public contact = signal({
     phone: '91-9521232972',
     email: 'akshayku.bothra@gmail.com',
@@ -22,7 +22,7 @@ export class PortfolioDataService {
 
   public education = signal({
     institution: 'Indian Institute of Technology, Kharagpur',
-    degree: 'B.Tech in Civil Engineering & Dual Degree in Engineering Entrepreneurship',
+    degree: 'B.Tech in Civil Engineering',
     cgpa: '8.11',
     duration: 'Dec 2020 - May 2025',
     location: 'Kharagpur, India'
@@ -77,7 +77,7 @@ export class PortfolioDataService {
   public publications = signal([
     {
       event: 'CTRG 2025 | IIT Guwahati',
-      title: 'Analysis and Modelling of Road Crash Injuries for Different Road Categories and Environments: A Case Study of West Bengal, India.',
+      title: 'Analysis and Modelling of Road Crash Injuries for Different Road Categories and Environments: a Case Study of West Bengal, India.',
       authors: 'Bothra, A. K., Pramanik, S., Ganguly, S., & Maitra, B. (2025).',
       notes: 'Accepted for presentation at 8th CTRG 2025, IIT Guwahati; to be published in Scopus Indexed Proceedings.'
     }

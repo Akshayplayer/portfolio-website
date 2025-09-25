@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ThemeService } from './services/theme.service';
 import { HeroComponent } from './hero/hero.component';
@@ -12,7 +11,6 @@ import { CompetitionsComponent } from './competitions/competitions.component';
 @Component({
   selector: 'app-root',
   imports: [
-    HeaderComponent, 
     FooterComponent,
     HeroComponent,
     AboutComponent,
@@ -22,7 +20,6 @@ import { CompetitionsComponent } from './competitions/competitions.component';
     CompetitionsComponent
   ],
   template: `
-    <app-header />
     <main>
       <app-hero />
       <app-about />
