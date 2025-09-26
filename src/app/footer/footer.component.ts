@@ -16,12 +16,12 @@ import { CommonModule } from '@angular/common';
   styles: `footer {
   padding: 2rem;
   text-align: center;
-  background-color: #1a1a1a;
-  color: white;
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
 }
 
 .social-links a {
-  color: white;
+  color: var(--footer-text-color);
   text-decoration: none;
   margin: 0 10px;
   font-weight: 500;
@@ -29,7 +29,7 @@ import { CommonModule } from '@angular/common';
 }
 
 .social-links a:hover {
-  color: #007bff;
+  color: var(--primary-color);
 }
 `,
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -44,20 +44,30 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: [`
     .skills {
       padding: 6rem 2rem;
-      background-color: #f9f9f9;
+      background-color: var(--timeline-background-light);
       text-align: center;
+    }
+    body.dark-mode .skills {
+        background-color: var(--timeline-background-dark);
     }
     .section-title {
       font-size: 3rem;
       margin-bottom: 4rem;
+      color: var(--section-title-color-light);
+    }
+    body.dark-mode .section-title {
+        color: var(--section-title-color-dark);
     }
     .skill-category {
       margin-bottom: 3rem;
     }
     .skill-category h3 {
       font-size: 1.8rem;
-      color: #007bff;
+      color: var(--navbar-link-hover-color-light);
       margin-bottom: 1.5rem;
+    }
+    body.dark-mode .skill-category h3 {
+        color: var(--navbar-link-hover-color-dark);
     }
     .skill-tags {
       display: flex;
@@ -68,12 +78,15 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .skill-tag {
       display: flex;
       align-items: center;
-      background-color: #007bff;
+      background-color: var(--navbar-link-hover-color-light);
       color: #fff;
       padding: 0.8rem 1.5rem;
       border-radius: 25px;
       font-size: 1.2rem;
       transition: transform 0.2s;
+    }
+     body.dark-mode .skill-tag {
+        background-color: var(--navbar-link-hover-color-dark);
     }
     .skill-tag:hover {
       transform: scale(1.1);

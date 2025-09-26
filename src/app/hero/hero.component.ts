@@ -16,17 +16,20 @@ import { PortfolioDataService } from '../portfolio-data.service';
   `,
   styles: [`
     .hero {
-      background: linear-gradient(45deg, #3a8dff, #6d23b6);
-      color: white;
+      background: var(--hero-background);
+      color: var(--hero-text-color);
       padding: 8rem 2rem;
       text-align: center;
-      border-bottom: 5px solid #6d23b6;
+      border-bottom: 5px solid var(--primary-color);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 40vh;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: var(--shadow-light);
+    }
+    body.dark-mode .hero {
+        box-shadow: var(--shadow-dark);
     }
     .hero-content {
       max-width: 800px;
@@ -50,7 +53,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
       width: 100%;
       max-width: 400px;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: var(--shadow-light);
+    }
+    body.dark-mode .hero-image img {
+        box-shadow: var(--shadow-dark);
     }
 
     @keyframes fadeInDown {

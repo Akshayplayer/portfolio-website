@@ -26,21 +26,21 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: [`
     .publications {
       padding: 6rem 2rem;
-      background-color: #fff;
+      background-color: var(--background-color);
     }
     .section-title {
       text-align: center;
       font-size: 3rem;
       margin-bottom: 4rem;
-      color: #333;
+      color: var(--text-color);
     }
     .publication-list {
       max-width: 900px;
       margin: 0 auto;
     }
     .publication-card {
-      background-color: #f9f9f9;
-      border-left: 5px solid #007bff;
+      background-color: var(--card-background-color);
+      border-left: 5px solid var(--primary-color);
       padding: 2rem;
       margin-bottom: 2rem;
       cursor: pointer;
@@ -53,22 +53,25 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .publication-card h3 {
       font-size: 1.6rem;
       margin-top: 0;
+      color: var(--text-color);
     }
     .event {
       font-style: italic;
       margin-bottom: 0.5rem;
+      color: var(--text-color);
     }
     .authors {
       font-weight: 600;
       margin-bottom: 0.5rem;
+      color: var(--text-color);
     }
     .notes {
       font-size: 0.9rem;
-      color: #555;
+      color: var(--text-secondary-color);
     }
     .dropdown-icon {
       font-size: 1.5rem;
-      color: #007bff;
+      color: var(--primary-color);
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
