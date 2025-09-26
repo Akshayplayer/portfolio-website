@@ -28,7 +28,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
   `,
   styles: [`
     .competitions {
-      padding: 6rem 2rem;
+      padding: 3rem 2rem;
       background-color: var(--section-background);
     }
     .section-title {

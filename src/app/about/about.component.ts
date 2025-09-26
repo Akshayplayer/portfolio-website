@@ -30,7 +30,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
   `,
   styles: [`
     .about-section {
-      padding: 6rem 2rem;
+      padding: 3rem 2rem;
       background-color: var(--section-background);
       text-align: center;
     }
