@@ -32,6 +32,7 @@ export class PortfolioDataService {
     {
       role: 'Full Stack Trainee Engineer',
       company: 'Cambridge Technology Enterprises',
+      domain: 'cambridgetech.com',
       location: 'Hyderabad',
       date: 'June 2025 - Aug 2025',
       details: [
@@ -44,6 +45,7 @@ export class PortfolioDataService {
     {
       role: 'Software Engineering Intern',
       company: 'Renergy Technologies',
+      domain: 'renergytechnologies.com',
       date: 'May 2024 - July 2024',
       details: [
         'Automated website testing by scripting in Playwright framework, validated 200+ UI components, and ensured website’s functionality',
@@ -54,6 +56,7 @@ export class PortfolioDataService {
     {
       role: 'Data Science Intern',
       company: 'Hindalco Industries Limited',
+      domain: 'hindalco.com',
       date: 'Feb 2024 - May 2024',
       details: [
         'Developed a predictive maintenance model to optimize machine efficiency and minimize downtime in window manufacturing process',
@@ -65,6 +68,7 @@ export class PortfolioDataService {
     {
       role: 'Data Science Intern',
       company: 'IIM Bangalore',
+      domain: 'iimb.ac.in',
       date: 'Dec 2023 - Jan 2024',
       details: [
         'Preprocessed abstract dataset using NLTK, resolved 95% of data issues, and created a RoBERTa-based Q/A model with HuggingFace',

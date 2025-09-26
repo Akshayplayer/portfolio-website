@@ -10,6 +10,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
         @for(competition of competitions(); track competition.name) {
           <div class="competition-card" (click)="selectCompetition(competition)">
             <div class="competition-header">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Smart_India_Hackathon_logo.png/220px-Smart_India_Hackathon_logo.png" alt="Smart India Hackathon Logo" class="competition-logo">
               <h3>{{ competition.name }}</h3>
               <span class="dropdown-icon">{{ selectedCompetition() === competition ? '▲' : '▼' }}</span>
             </div>
@@ -58,6 +59,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    .competition-logo {
+      width: 50px;
+      margin-right: 1rem;
     }
     .competition-card h3 {
       font-size: 1.8rem;

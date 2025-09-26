@@ -15,7 +15,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
               <h3>{{ job.role }}</h3>
               <span class="dropdown-icon">{{ selectedJob() === job ? '▲' : '▼' }}</span>
             </div>
-            <p class="company">{{ job.company }} - {{ job.location }}</p>
+            <div class="company-info">
+              <img [src]="'https://logo.clearbit.com/' + job.domain" alt="{{ job.company }} logo" class="company-logo">
+              <p class="company">{{ job.company }} - {{ job.location }}</p>
+            </div>
             <p class="date">{{ job.date }}</p>
             @if (selectedJob() === job) {
               <ul>
@@ -93,10 +96,20 @@ import { PortfolioDataService } from '../portfolio-data.service';
       margin-top: 0;
       color: #007bff;
     }
+    .company-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .company-logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 1rem;
+      border-radius: 5px;
+    }
     .company {
       font-size: 1.2rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
     }
     .date {
       color: #555;

@@ -7,6 +7,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
     <section class="education" id="education">
       <h2 class="section-title">Education</h2>
       <div class="education-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Indian_Institute_of_Technology_Kharagpur_Logo.svg/1200px-Indian_Institute_of_Technology_Kharagpur_Logo.svg.png" alt="IIT Kharagpur Logo" class="institution-logo">
         <h3>{{ education().degree }}</h3>
         <p class="institution">{{ education().institution }}</p>
         <p class="duration">{{ education().duration }}</p>
@@ -39,6 +40,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .education-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    .institution-logo {
+      width: 100px;
+      margin-bottom: 1.5rem;
     }
     .education-card h3 {
       font-size: 2rem;

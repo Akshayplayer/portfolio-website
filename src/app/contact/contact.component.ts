@@ -10,11 +10,8 @@ import { PortfolioDataService } from '../portfolio-data.service';
         <p><strong>Email:</strong> <a [href]="'mailto:' + contact().email">{{ contact().email }}</a></p>
         <p><strong>Phone:</strong> {{ contact().phone }}</p>
         <div class="social-links">
-          <a [href]="contact().linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a [href]="contact().github" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a [href]="contact().leetcode" target="_blank" rel="noopener noreferrer">LeetCode</a>
-          <a [href]="contact().codeforces" target="_blank" rel="noopener noreferrer">CodeForces</a>
-          <a [href]="contact().codechef" target="_blank" rel="noopener noreferrer">CodeChef</a>
+          <a [href]="contact().linkedin" target="_blank" rel="noopener noreferrer"><i class="devicon-linkedin-plain"></i></a>
+          <a [href]="contact().github" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original"></i></a>
         </div>
       </div>
     </section>
@@ -23,38 +20,37 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .contact {
       padding: 6rem 2rem;
       text-align: center;
-      background-color: #f4f4f4;
+      background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+      background-color: #2c3e50;
+      color: #ecf0f1;
     }
     .section-title {
       font-size: 3rem;
       margin-bottom: 2rem;
-      color: #333;
     }
     .contact-details p {
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
     .contact-details a {
-      color: #007bff;
+      color: #ecf0f1;
       text-decoration: none;
       transition: color 0.3s;
     }
     .contact-details a:hover {
-      color: #0056b3;
+      color: #3498db;
     }
     .social-links {
       margin-top: 2rem;
     }
     .social-links a {
       margin: 0 1rem;
-      font-size: 1.2rem;
-      color: #333;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom 0.3s;
+      font-size: 2.5rem;
+      color: #ecf0f1;
+      transition: color 0.3s;
     }
     .social-links a:hover {
-      border-bottom: 2px solid #007bff;
+      color: #3498db;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
