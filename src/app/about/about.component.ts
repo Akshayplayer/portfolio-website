@@ -1,61 +1,88 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { PortfolioDataService } from '../portfolio-data.service';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule],
   template: `
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <div class="about-image">
-        <img src="https://i.postimg.cc/ZKNn4Ngz/1000489578.png" alt="Profile Picture">
+    <section id="about" class="about-section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-container">
+        <img src="https://i.postimg.cc/YS2k8TKx/1000489578.png" alt="Akshay Ku Bothra" class="profile-picture">
+        <div class="about-content">
+          <p class="about-text">{{ aboutText() }}</p>
+          <div class="contact-info">
+            <a [href]="'mailto:' + contact().email" class="contact-link">
+              <i class="fas fa-envelope"></i>
+              <span>{{ contact().email }}</span>
+            </a>
+            <a [href]="contact().linkedin" target="_blank" class="contact-link">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a [href]="contact().github" target="_blank" class="contact-link">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="about-text">
-        <p>{{ aboutText() }}</p>
-      </div>
-    </div>
-  </section>
-`,
-  styles: `
-    section {
-      padding: 4rem 2rem;
-      background-color: var(--background-color);
-    }
-    h2 {
+    </section>
+  `,
+  styles: [`
+    .about-section {
+      padding: 6rem 2rem;
+      background-color: var(--section-background);
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-      font-weight: bold;
+    }
+    .section-title {
+      font-size: 3rem;
+      margin-bottom: 4rem;
       color: var(--text-color);
     }
-    .about-content {
+    .about-container {
       display: flex;
       align-items: center;
-      max-width: 900px;
+      justify-content: center;
+      gap: 4rem;
+      max-width: 1000px;
       margin: 0 auto;
+      text-align: left;
     }
-    .about-image {
-      flex: 0 0 200px;
-      margin-right: 2rem;
-    }
-    .about-image img {
-      width: 100%;
+    .profile-picture {
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
-      box-shadow: var(--shadow-light);
+      object-fit: cover;
+      border: 5px solid var(--primary-color);
     }
-    body.dark-mode .about-image img {
-      box-shadow: var(--shadow-dark);
+    .about-content {
+      max-width: 600px;
     }
-    .about-text p {
+    .about-text {
+      font-size: 1.2rem;
       line-height: 1.6;
-      color: var(--text-color);
+      margin-bottom: 2rem;
     }
-`,
+    .contact-info {
+      display: flex;
+      gap: 2rem;
+    }
+    .contact-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutComponent {
-  private portfolioDataService = inject(PortfolioDataService);
-  aboutText = this.portfolioDataService.aboutText;
+  private dataService = inject(PortfolioDataService);
+  public aboutText = this.dataService.aboutText;
+  public contact = this.dataService.contact;
 }

@@ -44,30 +44,21 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: [`
     .skills {
       padding: 6rem 2rem;
-      background-color: var(--timeline-background-light);
+      background-color: var(--section-background);
       text-align: center;
-    }
-    body.dark-mode .skills {
-        background-color: var(--timeline-background-dark);
     }
     .section-title {
       font-size: 3rem;
       margin-bottom: 4rem;
-      color: var(--section-title-color-light);
-    }
-    body.dark-mode .section-title {
-        color: var(--section-title-color-dark);
+      color: var(--text-color);
     }
     .skill-category {
       margin-bottom: 3rem;
     }
     .skill-category h3 {
       font-size: 1.8rem;
-      color: var(--navbar-link-hover-color-light);
+      color: var(--primary-color);
       margin-bottom: 1.5rem;
-    }
-    body.dark-mode .skill-category h3 {
-        color: var(--navbar-link-hover-color-dark);
     }
     .skill-tags {
       display: flex;
@@ -78,15 +69,13 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .skill-tag {
       display: flex;
       align-items: center;
-      background-color: var(--navbar-link-hover-color-light);
-      color: #fff;
+      background-color: var(--skill-tag-background);
+      color: var(--skill-tag-text);
       padding: 0.8rem 1.5rem;
       border-radius: 25px;
       font-size: 1.2rem;
       transition: transform 0.2s;
-    }
-     body.dark-mode .skill-tag {
-        background-color: var(--navbar-link-hover-color-dark);
+      border: 1px solid var(--primary-color);
     }
     .skill-tag:hover {
       transform: scale(1.1);

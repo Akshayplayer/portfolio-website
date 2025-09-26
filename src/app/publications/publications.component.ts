@@ -14,9 +14,11 @@ import { PortfolioDataService } from '../portfolio-data.service';
               <span class="dropdown-icon">{{ selectedPublication() === publication ? '▲' : '▼' }}</span>
             </div>
             @if(selectedPublication() === publication) {
-              <p class="event"><i>{{ publication.event }}</i></p>
-              <p class="authors">{{ publication.authors }}</p>
-              <p class="notes">{{ publication.notes }}</p>
+              <div class="publication-details">
+                <p class="event"><i>{{ publication.event }}</i></p>
+                <p class="authors">{{ publication.authors }}</p>
+                <p class="notes">{{ publication.notes }}</p>
+              </div>
             }
           </div>
         }
@@ -26,7 +28,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: [`
     .publications {
       padding: 6rem 2rem;
-      background-color: var(--background-color);
+      background-color: var(--section-background);
     }
     .section-title {
       text-align: center;
@@ -39,11 +41,24 @@ import { PortfolioDataService } from '../portfolio-data.service';
       margin: 0 auto;
     }
     .publication-card {
-      background-color: var(--card-background-color);
-      border-left: 5px solid var(--primary-color);
+      background-color: var(--element-background);
+      border-radius: 10px;
       padding: 2rem;
       margin-bottom: 2rem;
       cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-top: 4px solid var(--primary-color);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    body.dark-mode .publication-card {
+      box-shadow: 0 4px 15px rgba(57, 255, 20, 0.1);
+    }
+    .publication-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    body.dark-mode .publication-card:hover {
+      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.2);
     }
     .publication-header {
       display: flex;
@@ -52,8 +67,11 @@ import { PortfolioDataService } from '../portfolio-data.service';
     }
     .publication-card h3 {
       font-size: 1.6rem;
-      margin-top: 0;
+      margin: 0;
       color: var(--text-color);
+    }
+    .publication-details {
+      margin-top: 1.5rem;
     }
     .event {
       font-style: italic;
@@ -66,8 +84,8 @@ import { PortfolioDataService } from '../portfolio-data.service';
       color: var(--text-color);
     }
     .notes {
-      font-size: 0.9rem;
-      color: var(--text-secondary-color);
+      color: var(--text-color);
+      opacity: 0.7;
     }
     .dropdown-icon {
       font-size: 1.5rem;

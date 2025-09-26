@@ -19,7 +19,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: [`
     .education {
       padding: 6rem 2rem;
-      background-color: var(--background-color);
+      background-color: var(--section-background);
     }
     .section-title {
       text-align: center;
@@ -30,22 +30,22 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .education-card {
       max-width: 800px;
       margin: 0 auto;
-      background-color: var(--card-background-color);
+      background-color: var(--element-background);
       border-radius: 10px;
-      box-shadow: var(--shadow-light);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       padding: 2.5rem;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
     }
     body.dark-mode .education-card {
-      box-shadow: var(--shadow-dark);
+      box-shadow: 0 4px 15px rgba(57, 255, 20, 0.1);
     }
     .education-card:hover {
       transform: translateY(-10px);
-      box-shadow: var(--shadow-hover-light);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
     body.dark-mode .education-card:hover {
-      box-shadow: var(--shadow-hover-dark);
+      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.2);
     }
     .institution-logo {
       width: 100px;
@@ -64,7 +64,8 @@ import { PortfolioDataService } from '../portfolio-data.service';
     }
     .duration, .cgpa, .location {
       font-size: 1.1rem;
-      color: var(--text-secondary-color);
+      color: var(--text-color);
+      opacity: 0.7;
       margin-bottom: 0.5rem;
     }
   `],

@@ -29,7 +29,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: [`
     .competitions {
       padding: 6rem 2rem;
-      background-color: var(--background-color);
+      background-color: var(--section-background);
     }
     .section-title {
       text-align: center;
@@ -43,23 +43,23 @@ import { PortfolioDataService } from '../portfolio-data.service';
       margin: 0 auto;
     }
     .competition-card {
-      background-color: var(--card-background-color);
+      background-color: var(--element-background);
       border-radius: 10px;
-      box-shadow: var(--shadow-light);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       padding: 2rem;
       margin-bottom: 2rem;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
     body.dark-mode .competition-card {
-      box-shadow: var(--shadow-dark);
+      box-shadow: 0 4px 15px rgba(57, 255, 20, 0.1);
     }
     .competition-card:hover {
       transform: translateY(-5px);
-      box-shadow: var(--shadow-hover-light);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
     body.dark-mode .competition-card:hover {
-      box-shadow: var(--shadow-hover-dark);
+      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.2);
     }
     .competition-header {
       display: flex;

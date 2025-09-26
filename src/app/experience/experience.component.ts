@@ -36,7 +36,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: `
     #experience {
       padding: 6rem 2rem;
-      background-color: var(--background-color);
+      background-color: var(--section-background);
     }
     .section-title {
       text-align: center;
@@ -76,21 +76,21 @@ import { PortfolioDataService } from '../portfolio-data.service';
     }
     .timeline-content {
       padding: 1.5rem;
-      background-color: var(--card-background-color);
+      background-color: var(--element-background);
       border-radius: 10px;
-      box-shadow: var(--shadow-light);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       position: relative;
       transition: transform 0.3s, box-shadow 0.3s;
     }
     body.dark-mode .timeline-content {
-      box-shadow: var(--shadow-dark);
+      box-shadow: 0 4px 15px rgba(57, 255, 20, 0.1);
     }
     .timeline-content:hover {
       transform: translateY(-5px);
-      box-shadow: var(--shadow-hover-light);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
     body.dark-mode .timeline-content:hover {
-      box-shadow: var(--shadow-hover-dark);
+      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.2);
     }
     .job-header {
       display: flex;
@@ -119,7 +119,8 @@ import { PortfolioDataService } from '../portfolio-data.service';
       color: var(--text-color);
     }
     .date {
-      color: var(--text-secondary-color);
+      color: var(--text-color);
+      opacity: 0.7;
       margin-bottom: 1rem;
       font-style: italic;
     }

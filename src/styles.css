@@ -1,85 +1,48 @@
-
 :root {
+  /* Light Theme */
   --background-color-light: #fff;
+  --section-background-light: #f8f9fa;
+  --element-background-light: #fff;
   --text-color-light: #000;
-  --navbar-background-light: #fff;
-  --navbar-link-color-light: #000;
-  --navbar-link-hover-color-light: #007bff;
-  --timeline-background-light: #f9f9f9;
-  --timeline-item-background-light: #fff;
-  --timeline-item-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
-  --section-title-color-light: #000;
-  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.2);
+  --primary-color-light: #007bff;
+  --navbar-background-light: #f8f9fa;
+  --skill-tag-background-light: #007bff;
+  --skill-tag-text-light: #fff;
 
+  /* Dark Theme */
   --background-color-dark: #121212;
-  --text-color-dark: #fff;
+  --section-background-dark: #1e1e1e;
+  --element-background-dark: #2a2a2a;
+  --text-color-dark: #39ff14;
+  --primary-color-dark: #39ff14;
   --navbar-background-dark: #1e1e1e;
-  --navbar-link-color-dark: #fff;
-  --navbar-link-hover-color-dark: #007bff;
-  --timeline-background-dark: #1e1e1e;
-  --timeline-item-background-dark: #2a2a2a;
-  --timeline-item-shadow-dark: 0 4px 15px rgba(255, 255, 255, 0.1);
-  --section-title-color-dark: #fff;
-  --shadow-dark: 0 4px 15px rgba(255, 255, 255, 0.2);
+  --skill-tag-background-dark: #2a2a2a;
+  --skill-tag-text-dark: #39ff14;
 }
 
 body {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
+  --background-color: var(--background-color-light);
+  --section-background: var(--section-background-light);
+  --element-background: var(--element-background-light);
+  --text-color: var(--text-color-light);
+  --primary-color: var(--primary-color-light);
+  --navbar-background: var(--navbar-background-light);
+  --skill-tag-background: var(--skill-tag-background-light);
+  --skill-tag-text: var(--skill-tag-text-light);
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
-
-.navbar {
-  background-color: var(--navbar-background-light);
-}
-
-body.dark-mode .navbar {
-  background-color: var(--navbar-background-dark);
-}
-
-.navbar-link {
-  color: var(--navbar-link-color-light);
-}
-
-body.dark-mode .navbar-link {
-  color: var(--navbar-link-color-dark);
-}
-
-.navbar-link:hover {
-  color: var(--navbar-link-hover-color-light);
-}
-
-body.dark-mode .navbar-link:hover {
-  color: var(--navbar-link-hover-color-dark);
-}
-
-#experience {
-  background-color: var(--timeline-background-light);
-}
-
-body.dark-mode #experience {
-  background-color: var(--timeline-background-dark);
-}
-
-.timeline-content {
-  background-color: var(--timeline-item-background-light);
-  box-shadow: var(--timeline-item-shadow-light);
-}
-
-body.dark-mode .timeline-content {
-  background-color: var(--timeline-item-background-dark);
-  box-shadow: var(--timeline-item-shadow-dark);
-}
-
-.section-title {
-  color: var(--section-title-color-light);
-}
-
-body.dark-mode .section-title {
-  color: var(--section-title-color-dark);
+  --background-color: var(--background-color-dark);
+  --section-background: var(--section-background-dark);
+  --element-background: var(--element-background-dark);
+  --text-color: var(--text-color-dark);
+  --primary-color: var(--primary-color-dark);
+  --navbar-background: var(--navbar-background-dark);
+  --skill-tag-background: var(--skill-tag-background-dark);
+  --skill-tag-text: var(--skill-tag-text-dark);
 }

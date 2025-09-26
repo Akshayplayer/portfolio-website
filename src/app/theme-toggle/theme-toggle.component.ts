@@ -1,35 +1,47 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-theme-toggle',
   template: `
     <button (click)="toggleTheme()" class="theme-toggle-button">
-      {{ isDarkMode() ? 'Light Mode' : 'Dark Mode' }}
+      <i [class]="isDarkMode() ? 'devicon-sun-plain' : 'devicon-moon-plain'"></i>
+      <span>{{ isDarkMode() ? 'Light Mode' : 'Dark Mode' }}</span>
     </button>
   `,
   styles: [`
     .theme-toggle-button {
-      background-color: #007bff;
-      color: white;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--primary-color);
+      color: var(--skill-tag-text-light);
       border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
       cursor: pointer;
       font-size: 1rem;
-      transition: background-color 0.3s;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: var(--timeline-item-shadow);
     }
+
     .theme-toggle-button:hover {
-      background-color: #0056b3;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
-    .dark-mode .theme-toggle-button {
-      background-color: #f8f9fa;
-      color: #333;
+
+    body.dark-mode .theme-toggle-button {
+      background-color: var(--skill-tag-background);
+      color: var(--skill-tag-text);
+      border: 1px solid var(--primary-color);
     }
-    .dark-mode .theme-toggle-button:hover {
-      background-color: #e2e6ea;
+
+    .theme-toggle-button i {
+      font-size: 1.2rem;
     }
-  `]
+  `],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ThemeToggleComponent {
   private themeService = inject(ThemeService);
