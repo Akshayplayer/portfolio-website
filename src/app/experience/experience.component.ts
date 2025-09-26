@@ -16,7 +16,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
               <span class="dropdown-icon">{{ selectedJob() === job ? '▲' : '▼' }}</span>
             </div>
             <div class="company-info">
-              <img [src]="'https://logo.clearbit.com/' + job.domain" alt="{{ job.company }} logo" class="company-logo">
+              <img [src]="job.company === 'Renergy Technologies' ? 'https://i.postimg.cc/zBTPdk7p/renergylogo.jpg' : 'https://logo.clearbit.com/' + job.domain" alt="{{ job.company }} logo" class="company-logo">
               <p class="company">{{ job.company }} - {{ job.location }}</p>
             </div>
             <p class="date">{{ job.date }}</p>

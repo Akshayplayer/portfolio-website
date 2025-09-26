@@ -10,7 +10,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
     <h2>About Me</h2>
     <div class="about-content">
       <div class="about-image">
-        <img src="https://i.imgur.com/3t4y6kv.png" alt="Profile Picture">
+        <img src="https://i.postimg.cc/ZKNn4Ngz/1000489578.png" alt="Profile Picture">
       </div>
       <div class="about-text">
         <p>{{ aboutText() }}</p>
