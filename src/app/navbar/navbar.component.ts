@@ -30,22 +30,22 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
   `,
   styles: [`
     .navbar {
-      background-color: var(--navbar-background-color);
-      box-shadow: var(--shadow-light);
+      background-color: var(--element-background);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
+      padding: 1rem 2rem;
     }
     body.dark-mode .navbar {
-      box-shadow: var(--shadow-dark);
+      box-shadow: 0 2px 10px rgba(57, 255, 20, 0.1);
     }
     .navbar-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 1rem 2rem;
     }
     .navbar-menu {
       list-style: none;
