@@ -2,37 +2,37 @@
 
 ## Overview
 
-A personal portfolio website to showcase my skills, projects, and experience.
+A personal portfolio website built with Angular. It showcases the user's skills, experience, and projects in a clean, modern, and interactive way.
 
-## Implemented Features
+## Style, Design, and Features
 
-### Styling and Design
+### Phase 1: Initial Setup
 
-*   Modern and clean design.
-*   Dark mode support.
-*   Responsive layout for mobile and desktop.
+- **Project Initialization**: Created a new Angular project named "portfolio-website".
+- **Component Generation**: Generated the following components:
+  - `app-navbar`
+  - `app-hero`
+  - `app-about`
+  - `app-experience`
+  - `app-education`
+  - `app-competitions`
+  - `app-footer`
+- **Initial Styling**: Added basic styling to all components to create a visually appealing layout.
+- **Content Population**: Populated the components with placeholder content.
 
-### Components
+### Phase 2: Adding a Dark Mode
 
-*   **Header:** Navigation bar with links to different sections.
-*   **Hero:** A brief introduction about me.
-*   **About:** A more detailed section about my background and interests.
-*   **Experience:** My work experience, with an expand/collapse feature.
-*   **Projects:** A list of my projects, with an expand/collapse feature.
-*   **Skills:** My skills and expertise.
-*   **Education:** My educational background.
-*   **Competitions:** My participation in competitions.
-*   **Publications:** A list of my publications, with an expand/collapse feature.
-*   **Contact:** A form to get in touch with me.
-*   **Footer:** Contains links to my social media profiles and other relevant information.
-*   **Theme Toggle:** A button to switch between light and dark mode.
+- **Theme Service**: Created a `ThemeService` to manage the theme state (light/dark).
+- **CSS Variables**: Defined CSS variables for light and dark themes in `styles.css`.
+- **Theme Toggle**: Added a theme toggle button to the navbar.
+- **Component Refactoring**: Updated all component stylesheets to use the new CSS variables, ensuring compatibility with both light and dark modes.
 
-### Interactivity
+## Current Plan
 
-*   Expand/collapse functionality for the "Work Experience," "Publications," and "Projects" sections.
-
-## Future Plans
-
-*   Add a blog section.
-*   Implement a more detailed project view with images and videos.
-*   Add animations and transitions to improve the user experience.
+- **Task**: Add a dark mode to the portfolio website.
+- **Steps**:
+  1.  **DONE** Create a `ThemeService` to manage the theme state.
+  2.  **DONE** Define CSS variables for light and dark themes in `styles.css`.
+  3.  **DONE** Add a theme toggle button to the navbar.
+  4.  **DONE** Update all component stylesheets to use the new CSS variables.
+  5.  **DONE** Build the application to ensure there are no compilation errors.

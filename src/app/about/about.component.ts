@@ -21,12 +21,14 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: `
     section {
       padding: 4rem 2rem;
+      background-color: var(--background-color);
     }
     h2 {
       text-align: center;
       margin-bottom: 2rem;
       font-size: 2.5rem;
       font-weight: bold;
+      color: var(--text-color);
     }
     .about-content {
       display: flex;
@@ -41,10 +43,14 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .about-image img {
       width: 100%;
       border-radius: 50%;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: var(--shadow-light);
+    }
+    body.dark-mode .about-image img {
+      box-shadow: var(--shadow-dark);
     }
     .about-text p {
       line-height: 1.6;
+      color: var(--text-color);
     }
 `,
   changeDetection: ChangeDetectionStrategy.OnPush

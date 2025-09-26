@@ -1,0 +1,39 @@
+.publications {
+  padding: 6rem 2rem;
+}
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+.publication-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.publication-card {
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.publication-card:hover {
+  transform: translateY(-5px);
+}
+.publication-card h3 {
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+.conference {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.authors {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.publication-link {
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}

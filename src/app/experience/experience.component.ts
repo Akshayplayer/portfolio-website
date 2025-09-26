@@ -36,13 +36,13 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: `
     #experience {
       padding: 6rem 2rem;
-      background-color: #f9f9f9;
+      background-color: var(--background-color);
     }
     .section-title {
       text-align: center;
       font-size: 3rem;
       margin-bottom: 4rem;
-      color: #333;
+      color: var(--text-color);
       font-weight: 700;
     }
     .timeline {
@@ -54,7 +54,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
       content: '';
       position: absolute;
       width: 4px;
-      background-color: #007bff;
+      background-color: var(--primary-color);
       top: 0;
       bottom: 0;
       left: 50%;
@@ -76,15 +76,21 @@ import { PortfolioDataService } from '../portfolio-data.service';
     }
     .timeline-content {
       padding: 1.5rem;
-      background-color: white;
+      background-color: var(--card-background-color);
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--shadow-light);
       position: relative;
       transition: transform 0.3s, box-shadow 0.3s;
     }
+    body.dark-mode .timeline-content {
+      box-shadow: var(--shadow-dark);
+    }
     .timeline-content:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--shadow-hover-light);
+    }
+    body.dark-mode .timeline-content:hover {
+      box-shadow: var(--shadow-hover-dark);
     }
     .job-header {
       display: flex;
@@ -94,7 +100,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .timeline-content h3 {
       font-size: 1.8rem;
       margin-top: 0;
-      color: #007bff;
+      color: var(--primary-color);
     }
     .company-info {
       display: flex;
@@ -110,9 +116,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .company {
       font-size: 1.2rem;
       font-weight: 600;
+      color: var(--text-color);
     }
     .date {
-      color: #555;
+      color: var(--text-secondary-color);
       margin-bottom: 1rem;
       font-style: italic;
     }
@@ -126,16 +133,17 @@ import { PortfolioDataService } from '../portfolio-data.service';
       line-height: 1.6;
       position: relative;
       padding-left: 20px;
+      color: var(--text-color);
     }
     li::before {
       content: '\u2022';
       position: absolute;
       left: 0;
-      color: #007bff;
+      color: var(--primary-color);
     }
     .dropdown-icon {
       font-size: 1.5rem;
-      color: #007bff;
+      color: var(--primary-color);
     }
 `,
   changeDetection: ChangeDetectionStrategy.OnPush

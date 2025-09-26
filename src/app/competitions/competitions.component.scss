@@ -1,0 +1,56 @@
+.competitions {
+  padding: 6rem 2rem;
+}
+.competition-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.competition-card {
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: var(--shadow-light);
+}
+
+body.dark-mode .competition-card {
+  box-shadow: var(--shadow-dark);
+}
+
+.competition-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .competition-card:hover {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.competition-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.competition-logo {
+  width: 50px;
+  margin-right: 1rem;
+}
+.competition-card h3 {
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+.track {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.date {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.description {
+  line-height: 1.6;
+}
+.dropdown-icon {
+  font-size: 1.5rem;
+}
