@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-navbar',
+  imports: [ThemeToggleComponent],
   template: `
     <nav class="navbar">
       <div class="navbar-container">
@@ -22,6 +24,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
             <a href="#education" class="navbar-link">Education</a>
           </li>
         </ul>
+        <app-theme-toggle />
       </div>
     </nav>
   `,
