@@ -10,6 +10,10 @@ import { CommonModule } from '@angular/common';
     <a href="https://www.linkedin.com/in/akshay-ku-bothra-1136861bb/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
     <a href="https://github.com/Akshayplayer" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     <a href="https://leetcode.com/u/user3885IN/" target="_blank"><i class="fas fa-code"></i> LeetCode</a>
+    <a href="https://in.pinterest.com/My_Anime_Motivation_Diary/" target="_blank"><i class="fa-brands fa-pinterest"></i> MyDiaries</a>
+    <a href="https://www.instagram.com/akshay_jain_2000/?next=%2F" target="_blank"><i class="fa-brands fa-instagram"></i> INSTA </a>
+    
+
   </div>
 </footer>
 `,

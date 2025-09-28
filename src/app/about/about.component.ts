@@ -15,13 +15,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
               <i class="fas fa-envelope"></i>
               <span>{{ contact().email }}</span>
             </a>
-            <a [href]="contact().linkedin" target="_blank" class="contact-link">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a [href]="contact().github" target="_blank" class="contact-link">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
+            
+            <a [href]="'tel:' + contact().phone" target="_blank" class="contact-link">
+            <i class="fa-solid fa-phone"></i>
+              <span>{{ contact().phone }}</span>
             </a>
           </div>
         </div>
