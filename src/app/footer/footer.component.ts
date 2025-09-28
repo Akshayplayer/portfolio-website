@@ -7,9 +7,9 @@ import { CommonModule } from '@angular/common';
   template: `<footer>
   <p>&copy; 2024 Akshay Ku Bothra. All rights reserved.</p>
   <div class="social-links">
-    <a href="https://www.linkedin.com/in/akshay-kumar-bothra-364175206/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/AkshayBothra" target="_blank">GitHub</a>
-    <a href="https://leetcode.com/akshaybothra28/" target="_blank">LeetCode</a>
+    <a href="https://www.linkedin.com/in/akshay-ku-bothra-1136861bb/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/Akshayplayer" target="_blank">GitHub</a>
+    <a href="https://leetcode.com/u/user3885IN/" target="_blank">LeetCode</a>
   </div>
 </footer>
 `,

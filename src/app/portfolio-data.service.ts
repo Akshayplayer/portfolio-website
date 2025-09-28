@@ -34,7 +34,7 @@ export class PortfolioDataService {
       company: 'Cambridge Technology Enterprises',
       domain: 'cambridgetech.com',
       location: 'Hyderabad',
-      date: 'June 2025 - Aug 2025',
+      date: 'June 2025 - Present',
       details: [
         'Built a resource tracker with Angular and Kendo UI, featuring role-based dashboards, grids, charts and spreadsheets for audits',
         'Developed ASP.NET Core (C#) backend with 3-tier architecture, JWT auth, role-based access, Serilog logging, and error handling',
