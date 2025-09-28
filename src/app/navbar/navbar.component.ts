@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 @Component({
@@ -7,7 +7,10 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
   template: `
     <nav class="navbar">
       <div class="navbar-container">
-        <ul class="navbar-menu">
+        <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar-menu" [class.mobile-menu-active]="isMobileMenuOpen()">
           <li class="navbar-item">
             <a href="#about" class="navbar-link">About</a>
           </li>
@@ -41,7 +44,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
     }
     .navbar-container {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
     .navbar-menu {
@@ -63,7 +66,44 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
     .navbar-link:hover {
       color: var(--primary-color);
     }
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--element-background);
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .mobile-menu-toggle {
+        display: block;
+      }
+      .navbar-item {
+        margin: 1rem 0;
+        text-align: center;
+      }
+      .mobile-menu-active {
+        display: flex;
+      }
+    }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  isMobileMenuOpen = signal(false);
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen.set(!this.isMobileMenuOpen());
+  }
+}

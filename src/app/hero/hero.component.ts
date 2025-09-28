@@ -70,6 +70,18 @@ import { PortfolioDataService } from '../portfolio-data.service';
         transform: translateY(0);
       }
     }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+      .hero-subtitle {
+        font-size: 1.5rem;
+      }
+      .hero {
+        padding: 6rem 1rem;
+      }
+    }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

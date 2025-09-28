@@ -121,6 +121,15 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .dropdown-icon {
       font-size: 1.5rem;
     }
+
+    @media (max-width: 768px) {
+      .timeline-item,
+      .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding: 0 0 2rem 0;
+      }
+    }
 `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -71,6 +71,17 @@ import { PortfolioDataService } from '../portfolio-data.service';
       align-items: center;
       gap: 0.5rem;
     }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
+      .contact-info {
+        justify-content: center;
+      }
+    }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
