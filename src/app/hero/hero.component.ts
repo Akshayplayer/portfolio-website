@@ -24,6 +24,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
       align-items: center;
       justify-content: center;
       min-height: 40vh;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .hero-content {
       max-width: 800px;

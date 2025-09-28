@@ -1,12 +1,12 @@
 /* Global Styles */
 :root {
   /* Light Theme */
-  --background-color-light: #fff;
-  --section-background-light: #f8f9fa;
-  --element-background-light: #fff;
-  --text-color-light: #000;
+  --background-color-light: #f4f5f7;
+  --section-background-light: #ffffff;
+  --element-background-light: #ffffff;
+  --text-color-light: #333;
   --primary-color-light: #007bff;
-  --navbar-background-light: #f8f9fa;
+  --navbar-background-light: #ffffff;
   --skill-tag-background-light: #007bff;
   --skill-tag-text-light: #fff;
   --primary-accent-light: #007bff;

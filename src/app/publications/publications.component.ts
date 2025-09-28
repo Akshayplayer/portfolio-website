@@ -45,10 +45,12 @@ import { PortfolioDataService } from '../portfolio-data.service';
       margin-bottom: 2rem;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .publication-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
     }
 
     .publication-header {

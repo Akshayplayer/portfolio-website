@@ -33,10 +33,12 @@ import { PortfolioDataService } from '../portfolio-data.service';
       padding: 2.5rem;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .education-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
     }
 
     .institution-logo {
