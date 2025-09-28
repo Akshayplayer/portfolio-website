@@ -31,13 +31,11 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: [`
     .about-section {
       padding: 3rem 2rem;
-      background-color: var(--section-background);
       text-align: center;
     }
     .section-title {
       font-size: 3rem;
       margin-bottom: 4rem;
-      color: var(--text-color);
     }
     .about-container {
       display: flex;
@@ -53,7 +51,6 @@ import { PortfolioDataService } from '../portfolio-data.service';
       height: 250px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid var(--primary-color);
     }
     .about-content {
       max-width: 600px;
@@ -68,15 +65,11 @@ import { PortfolioDataService } from '../portfolio-data.service';
       gap: 2rem;
     }
     .contact-link {
-      color: var(--primary-color);
       text-decoration: none;
       font-size: 1.2rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
-    }
-    .contact-link:hover {
-      text-decoration: underline;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush

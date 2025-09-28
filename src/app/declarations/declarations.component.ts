@@ -11,8 +11,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: [`
     .declarations-container {
       padding: 2rem;
-      background-color: #f8f9fa;
-      border-top: 1px solid #dee2e6;
       text-align: center;
     }
   `],

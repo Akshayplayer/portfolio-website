@@ -39,9 +39,6 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       z-index: 1000;
       padding: 1rem 2rem;
     }
-    body.dark-mode .navbar {
-      box-shadow: 0 2px 10px rgba(57, 255, 20, 0.1);
-    }
     .navbar-container {
       display: flex;
       justify-content: center;

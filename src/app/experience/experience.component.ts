@@ -17,7 +17,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
             </div>
             <div class="company-info">
               <img [src]="job.company === 'Renergy Technologies' ? 'https://i.postimg.cc/zBTPdk7p/renergylogo.jpg' : 'https://logo.clearbit.com/' + job.domain" alt="{{ job.company }} logo" class="company-logo">
-              <p class="company">{{ job.company }} - {{ job.location }}</p>
+              <p class="company primary-accent">{{ job.company }} - {{ job.location }}</p>
             </div>
             <p class="date">{{ job.date }}</p>
             @if (selectedJob() === job) {
@@ -36,13 +36,11 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: `
     #experience {
       padding: 3rem 2rem;
-      background-color: var(--section-background);
     }
     .section-title {
       text-align: center;
       font-size: 3rem;
       margin-bottom: 4rem;
-      color: var(--text-color);
       font-weight: 700;
     }
     .timeline {
@@ -50,16 +48,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
       max-width: 900px;
       margin: 0 auto;
     }
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      background-color: var(--primary-color);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -2px;
-    }
+
     .timeline-item {
       padding: 2rem 0;
       position: relative;
@@ -78,20 +67,14 @@ import { PortfolioDataService } from '../portfolio-data.service';
       padding: 1.5rem;
       background-color: var(--element-background);
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       position: relative;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    body.dark-mode .timeline-content {
-      box-shadow: 0 4px 15px rgba(57, 255, 20, 0.1);
-    }
+
     .timeline-content:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
-    body.dark-mode .timeline-content:hover {
-      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.2);
-    }
+
     .job-header {
       display: flex;
       justify-content: space-between;
@@ -100,7 +83,6 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .timeline-content h3 {
       font-size: 1.8rem;
       margin-top: 0;
-      color: var(--primary-color);
     }
     .company-info {
       display: flex;
@@ -116,10 +98,8 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .company {
       font-size: 1.2rem;
       font-weight: 600;
-      color: var(--text-color);
     }
     .date {
-      color: var(--text-color);
       opacity: 0.7;
       margin-bottom: 1rem;
       font-style: italic;
@@ -134,17 +114,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
       line-height: 1.6;
       position: relative;
       padding-left: 20px;
-      color: var(--text-color);
     }
-    li::before {
-      content: '\u2022';
-      position: absolute;
-      left: 0;
-      color: var(--primary-color);
-    }
+
     .dropdown-icon {
       font-size: 1.5rem;
-      color: var(--primary-color);
     }
 `,
   changeDetection: ChangeDetectionStrategy.OnPush

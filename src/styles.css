@@ -1,3 +1,4 @@
+/* Global Styles */
 :root {
   /* Light Theme */
   --background-color-light: #fff;
@@ -8,16 +9,22 @@
   --navbar-background-light: #f8f9fa;
   --skill-tag-background-light: #007bff;
   --skill-tag-text-light: #fff;
+  --primary-accent-light: #007bff;
 
-  /* Dark Theme */
+  /* Dark Theme Palette */
   --background-color-dark: #121212;
   --section-background-dark: #1e1e1e;
   --element-background-dark: #2a2a2a;
-  --text-color-dark: #39ff14;
-  --primary-color-dark: #39ff14;
-  --navbar-background-dark: #1e1e1e;
-  --skill-tag-background-dark: #2a2a2a;
-  --skill-tag-text-dark: #39ff14;
+  --text-color-dark: #E0E0E0;
+
+  /* --- Diwali Color Palette --- */
+  --diwali-gold: #FFD700;
+  --diwali-magenta: #FF00FF;
+  --diwali-cyan: #00FFFF;
+  --diwali-lime: #39ff14;
+  --diwali-violet: #9400D3;
+  --diwali-orange: #FF5733;
+  --diwali-blue: #33C7FF;
 }
 
 body {
@@ -26,6 +33,7 @@ body {
   --element-background: var(--element-background-light);
   --text-color: var(--text-color-light);
   --primary-color: var(--primary-color-light);
+  --primary-accent: var(--primary-accent-light);
   --navbar-background: var(--navbar-background-light);
   --skill-tag-background: var(--skill-tag-background-light);
   --skill-tag-text: var(--skill-tag-text-light);
@@ -41,8 +49,177 @@ body.dark-mode {
   --section-background: var(--section-background-dark);
   --element-background: var(--element-background-dark);
   --text-color: var(--text-color-dark);
-  --primary-color: var(--primary-color-dark);
-  --navbar-background: var(--navbar-background-dark);
-  --skill-tag-background: var(--skill-tag-background-dark);
-  --skill-tag-text: var(--skill-tag-text-dark);
+}
+
+/* General Dark Mode Styles */
+body.dark-mode a {
+  color: var(--diwali-blue);
+}
+
+body.dark-mode p,
+body.dark-mode li {
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .section-title,
+body.dark-mode .hero-title,
+body.dark-mode .hero-subtitle,
+body.dark-mode .primary-accent {
+  text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+}
+
+/* --- Component-Specific Diwali Styles --- */
+
+/* Navbar */
+body.dark-mode .navbar {
+  background-color: var(--section-background-dark);
+}
+
+/* Hero */
+body.dark-mode .hero {
+  border-bottom: 5px solid var(--diwali-gold);
+}
+body.dark-mode .hero-title {
+  color: var(--diwali-gold);
+  text-shadow: 0 0 8px var(--diwali-gold);
+}
+body.dark-mode .hero-subtitle {
+  color: var(--diwali-magenta);
+  text-shadow: 0 0 8px var(--diwali-magenta);
+}
+
+/* About */
+body.dark-mode #about .section-title {
+  color: var(--diwali-cyan);
+  text-shadow: 0 0 8px var(--diwali-cyan);
+}
+body.dark-mode .profile-picture {
+  border: 5px solid var(--diwali-violet);
+}
+body.dark-mode .contact-link {
+  color: var(--diwali-orange);
+}
+body.dark-mode .contact-link:hover {
+  text-shadow: 0 0 5px var(--diwali-orange);
+}
+
+/* Experience */
+body.dark-mode #experience .section-title {
+  color: var(--diwali-lime);
+  text-shadow: 0 0 8px var(--diwali-lime);
+}
+body.dark-mode #experience .timeline::after {
+  background-color: var(--diwali-violet);
+  content: '';
+  position: absolute;
+  width: 4px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+body.dark-mode #experience .timeline-content {
+  box-shadow: 0 4px 15px rgba(148, 0, 211, 0.2);
+}
+body.dark-mode #experience .timeline-content:hover {
+  box-shadow: 0 8px 25px rgba(148, 0, 211, 0.4);
+}
+body.dark-mode #experience li::before {
+  color: var(--diwali-lime);
+  content: '\2022'; /* Bullet character */
+  position: absolute;
+  left: 0;
+}
+body.dark-mode #experience .dropdown-icon {
+  color: var(--diwali-lime);
+}
+
+/* Education */
+body.dark-mode #education .section-title {
+  color: var(--diwali-orange);
+  text-shadow: 0 0 8px var(--diwali-orange);
+}
+body.dark-mode #education .education-card {
+  box-shadow: 0 4px 15px rgba(51, 199, 255, 0.2);
+}
+body.dark-mode #education .education-card:hover {
+  box-shadow: 0 8px 25px rgba(51, 199, 255, 0.4);
+}
+body.dark-mode #education .institution {
+  color: var(--diwali-blue);
+}
+
+/* Skills */
+body.dark-mode .skills .section-title {
+  color: var(--diwali-gold);
+  text-shadow: 0 0 8px var(--diwali-gold);
+}
+body.dark-mode .skill-category .languages {
+  color: var(--diwali-cyan);
+}
+body.dark-mode .skill-category .development {
+  color: var(--diwali-magenta);
+}
+body.dark-mode .skill-category .data-science {
+  color: var(--diwali-violet);
+}
+body.dark-mode .skill-tag {
+  background-color: var(--element-background-dark);
+  border: 1px solid var(--diwali-lime);
+  color: var(--diwali-lime) !important; /* Force color */
+}
+body.dark-mode .skill-tag:hover {
+  box-shadow: 0 0 10px var(--diwali-lime);
+  transform: scale(1.1);
+}
+body.dark-mode .skill-tag i {
+  color: var(--diwali-lime);
+}
+
+/* Competitions */
+body.dark-mode #competitions .section-title {
+  color: var(--diwali-cyan);
+  text-shadow: 0 0 8px var(--diwali-cyan);
+}
+body.dark-mode .competition-card {
+  border: 1px solid var(--diwali-magenta);
+  box-shadow: 0 0 10px var(--diwali-magenta);
+}
+body.dark-mode .competition-card:hover {
+  box-shadow: 0 0 20px var(--diwali-magenta);
+}
+body.dark-mode #competitions .primary-accent {
+  color: var(--diwali-lime);
+}
+body.dark-mode #competitions .dropdown-icon {
+  color: var(--diwali-cyan);
+}
+
+/* Publications */
+body.dark--mode #publications .section-title {
+  color: var(--diwali-violet);
+  text-shadow: 0 0 8px var(--diwali-violet);
+}
+body.dark-mode .publication-card {
+  border: 1px solid var(--diwali-orange);
+  box-shadow: 0 0 10px var(--diwali-orange);
+}
+body.dark-mode .publication-card:hover {
+  box-shadow: 0 0 20px var(--diwali-orange);
+}
+body.dark-mode #publications .primary-accent {
+  color: var(--diwali-blue);
+}
+body.dark-mode #publications .dropdown-icon {
+  color: var(--diwali-violet);
+}
+
+/* Declarations */
+body.dark-mode .declarations-container {
+  border-top: 2px solid var(--diwali-gold);
+  box-shadow: 0 -5px 15px -5px var(--diwali-gold);
+}
+body.dark-mode .declarations-container h2 {
+  color: var(--diwali-gold);
+  text-shadow: 0 0 8px var(--diwali-gold);
 }
