@@ -8,7 +8,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
     <nav class="navbar">
       <div class="navbar-container">
         <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
-          <i class="fas fa-bars"></i>
+          &#9776;
         </button>
         <ul class="navbar-menu" [class.mobile-menu-active]="isMobileMenuOpen()">
           <li class="navbar-item">
@@ -44,7 +44,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
     }
     .navbar-container {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
     .navbar-menu {
@@ -54,7 +54,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       padding: 0;
     }
     .navbar-item {
-      margin: 0 1.5rem;
+      margin: 0 1rem;
     }
     .navbar-link {
       color: var(--text-color);
@@ -72,9 +72,13 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       border: none;
       font-size: 1.5rem;
       cursor: pointer;
+      color: var(--text-color);
     }
 
     @media (max-width: 768px) {
+      .navbar-container {
+        justify-content: space-between;
+      }
       .navbar-menu {
         display: none;
         flex-direction: column;
