@@ -52,16 +52,8 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .timeline-item {
       padding: 2rem 0;
       position: relative;
-      width: 50%;
+      width: 100%;
       cursor: pointer;
-    }
-    .timeline-item:nth-child(odd) {
-      left: 0;
-      padding-right: 2rem;
-    }
-    .timeline-item:nth-child(even) {
-      left: 50%;
-      padding-left: 2rem;
     }
     .timeline-content {
       padding: 1.5rem;
@@ -120,15 +112,6 @@ import { PortfolioDataService } from '../portfolio-data.service';
 
     .dropdown-icon {
       font-size: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .timeline-item,
-      .timeline-item:nth-child(even) {
-        width: 100%;
-        left: 0;
-        padding: 0 0 2rem 0;
-      }
     }
 `,
   changeDetection: ChangeDetectionStrategy.OnPush

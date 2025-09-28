@@ -108,16 +108,7 @@ body.dark-mode #experience .section-title {
   color: var(--diwali-lime);
   text-shadow: 0 0 8px var(--diwali-lime);
 }
-body.dark-mode #experience .timeline::after {
-  background-color: var(--diwali-violet);
-  content: '';
-  position: absolute;
-  width: 4px;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -2px;
-}
+
 body.dark-mode #experience .timeline-content {
   box-shadow: 0 4px 15px rgba(148, 0, 211, 0.2);
 }
