@@ -46,6 +46,7 @@ export class PortfolioDataService {
       role: 'Software Engineering Intern',
       company: 'Renergy Technologies',
       domain: 'renergytechnologies.com',
+      location: 'Remote',
       date: 'May 2024 - July 2024',
       details: [
         'Automated website testing by scripting in Playwright framework, validated 200+ UI components, and ensured website’s functionality',
@@ -57,6 +58,7 @@ export class PortfolioDataService {
       role: 'Data Science Intern',
       company: 'Hindalco Industries Limited',
       domain: 'hindalco.com',
+      location: 'Mumbai',
       date: 'Feb 2024 - May 2024',
       details: [
         'Developed a predictive maintenance model to optimize machine efficiency and minimize downtime in window manufacturing process',
@@ -69,6 +71,7 @@ export class PortfolioDataService {
       role: 'Data Science Intern',
       company: 'IIM Bangalore',
       domain: 'iimb.ac.in',
+      location: 'Remote',
       date: 'Dec 2023 - Jan 2024',
       details: [
         'Preprocessed abstract dataset using NLTK, resolved 95% of data issues, and created a RoBERTa-based Q/A model with HuggingFace',
@@ -82,7 +85,7 @@ export class PortfolioDataService {
     {
       event: 'CTRG 2025 | IIT Guwahati',
       title: 'Analysis and Modelling of Road Crash Injuries for Different Road Categories and Environments: a Case Study of West Bengal, India.',
-      authors: 'Bothra, A. K., Pramanik, S., Ganguly, S., & Maitra, B. (2025).',
+      authors: 'Bothra A. K., Pramanik S., Ganguly S., & Maitra B. (2025).',
       notes: 'Accepted for presentation at 8th CTRG 2025, IIT Guwahati; to be published in Scopus Indexed Proceedings.'
     }
   ]);
