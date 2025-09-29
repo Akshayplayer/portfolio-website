@@ -9,6 +9,7 @@ import { PublicationsComponent } from './publications/publications.component';
 import { CompetitionsComponent } from './competitions/competitions.component';
 import { EducationComponent } from './education/education.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ContactBarComponent } from './contact-bar/contact-bar';
 
 @Component({
   selector: 'app-root',
@@ -21,10 +22,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     SkillsComponent,
     PublicationsComponent,
     CompetitionsComponent,
-    EducationComponent
+    EducationComponent,
+    ContactBarComponent
   ],
   template: `
     <app-navbar />
+    <app-contact-bar />
     <main>
       <app-hero />
       <app-about />

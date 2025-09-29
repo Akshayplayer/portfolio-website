@@ -1,38 +1,23 @@
-# Project Blueprint
+# Angular Portfolio Website
 
-## Overview
+This is a portfolio website built with Angular, showcasing projects, skills, and experience.
 
-A personal portfolio website built with Angular. It showcases the user's skills, experience, and projects in a clean, modern, and interactive way.
+## Implemented Features
 
-## Style, Design, and Features
+*   **Header:** A navigation header with links to different sections of the portfolio.
+*   **Hero Section:** A hero section with a title, subtitle, and a call-to-action button.
+*   **About Section:** A section with a brief description of the person.
+*   **Skills Section:** A section showcasing the person's skills.
+*   **Experience Section:** A timeline of the person's work experience.
+*   **Education Section:** A section with details about the person's education.
+*   **Projects Section:** A section to display the person's projects.
+*   **Competitions Section:** A section to highlight the person's achievements in competitions.
+*   **Contact Section:** A section with contact information and social media links.
+*   **Theme Toggle:** A theme toggle button in the header to switch between dark and light modes.
 
-### Phase 1: Initial Setup
+## Current Task: Implement Theme Toggle
 
-- **Project Initialization**: Created a new Angular project named "portfolio-website".
-- **Component Generation**: Generated the following components:
-  - `app-navbar`
-  - `app-hero`
-  - `app-about`
-  - `app-experience`
-  - `app-education`
-  - `app-competitions`
-  - `app-footer`
-- **Initial Styling**: Added basic styling to all components to create a visually appealing layout.
-- **Content Population**: Populated the components with placeholder content.
-
-### Phase 2: Adding a Dark Mode
-
-- **Theme Service**: Created a `ThemeService` to manage the theme state (light/dark).
-- **CSS Variables**: Defined CSS variables for light and dark themes in `styles.css`.
-- **Theme Toggle**: Added a theme toggle button to the navbar.
-- **Component Refactoring**: Updated all component stylesheets to use the new CSS variables, ensuring compatibility with both light and dark modes.
-
-## Current Plan
-
-- **Task**: Add a dark mode to the portfolio website.
-- **Steps**:
-  1.  **DONE** Create a `ThemeService` to manage the theme state.
-  2.  **DONE** Define CSS variables for light and dark themes in `styles.css`.
-  3.  **DONE** Add a theme toggle button to the navbar.
-  4.  **DONE** Update all component stylesheets to use the new CSS variables.
-  5.  **DONE** Build the application to ensure there are no compilation errors.
+*   **Theme Service:** Create a `theme.service.ts` to manage the theme state (dark or light).
+*   **Header Component:** Add a theme toggle button to the header.
+*   **CSS Variables:** Define CSS variables for colors and other theme-related properties.
+*   **Component Styles:** Update the styles of all components to use the new CSS variables.

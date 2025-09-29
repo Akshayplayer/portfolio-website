@@ -1,29 +1,32 @@
 #about {
   padding: 6rem 2rem;
+  background-color: var(--background-color);
 }
+
 .about-content {
   display: flex;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .about-text {
   flex: 2;
   padding-right: 4rem;
+  color: var(--text-color);
 }
+
 .about-text p {
   font-size: 1.2rem;
   line-height: 1.8;
 }
+
 .about-image {
   flex: 1;
 }
+
 .about-image img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: var(--shadow-light);
-}
-
-body.dark-mode .about-image img {
-  box-shadow: var(--shadow-dark);
+  box-shadow: var(--timeline-item-shadow);
 }

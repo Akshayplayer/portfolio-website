@@ -20,9 +20,8 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .contact {
       padding: 6rem 2rem;
       text-align: center;
-      background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
-      background-color: #2c3e50;
-      color: #ecf0f1;
+      background-color: var(--background-color);
+      color: var(--text-color);
     }
     .section-title {
       font-size: 3rem;
@@ -33,12 +32,12 @@ import { PortfolioDataService } from '../portfolio-data.service';
       margin-bottom: 1rem;
     }
     .contact-details a {
-      color: #ecf0f1;
+      color: var(--text-color);
       text-decoration: none;
       transition: color 0.3s;
     }
     .contact-details a:hover {
-      color: #3498db;
+      color: var(--primary-color);
     }
     .social-links {
       margin-top: 2rem;
@@ -46,11 +45,11 @@ import { PortfolioDataService } from '../portfolio-data.service';
     .social-links a {
       margin: 0 1rem;
       font-size: 2.5rem;
-      color: #ecf0f1;
+      color: var(--text-color);
       transition: color 0.3s;
     }
     .social-links a:hover {
-      color: #3498db;
+      color: var(--primary-color);
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush

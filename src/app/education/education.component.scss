@@ -1,6 +1,8 @@
 .education {
   padding: 6rem 2rem;
+  background-color: var(--background-color);
 }
+
 .education-card {
   max-width: 900px;
   margin: 0 auto;
@@ -8,11 +10,9 @@
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
-  box-shadow: var(--shadow-light);
-}
-
-body.dark-mode .education-card {
-  box-shadow: var(--shadow-dark);
+  box-shadow: var(--timeline-item-shadow);
+  background-color: var(--card-background);
+  color: var(--text-color);
 }
 
 .education-card:hover {
@@ -28,21 +28,26 @@ body.dark-mode .education-card:hover {
   width: 100px;
   margin-bottom: 1.5rem;
 }
+
 .education-card h3 {
   font-size: 1.8rem;
   margin-top: 0;
 }
+
 .institution {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
 .duration {
   margin-bottom: 0.5rem;
   font-style: italic;
 }
+
 .cgpa {
   margin-bottom: 0.5rem;
 }
+
 .location {
   font-weight: 300;
 }

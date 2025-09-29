@@ -14,6 +14,9 @@
   padding: 2rem;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  box-shadow: var(--timeline-item-shadow);
 }
 
 .skill-card:hover {
@@ -23,6 +26,7 @@
 .skill-card i {
   font-size: 4rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
 .skill-card h3 {

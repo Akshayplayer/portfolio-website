@@ -15,7 +15,11 @@ export class PortfolioDataService {
     github: 'https://github.com/Akshayplayer',
     leetcode: 'https://leetcode.com/u/user3885IN/',
     codeforces: 'https://codeforces.com/profile/akshayku.bothra',
-    codechef: 'https://www.codechef.com/users/akshaykubothra'
+    codechef: 'https://www.codechef.com/users/akshaykubothra',
+    Pinterest: 'https://pin.it/63HCPFTOe',
+    Instagram: 'https://www.instagram.com/akshay_jain_2000/?next=%2F'
+
+
   });
 
   public aboutText = signal(`A highly motivated and results-oriented Software Engineer with a passion for building robust and scalable applications. Proficient in a wide range of technologies, including Angular, ASP.NET Core, and various data science libraries. Eager to contribute to a challenging and innovative environment.`);
@@ -130,5 +134,38 @@ export class PortfolioDataService {
     'Artificial Intelligence Foundations and Applications',
     'Improving Deep Neural Network',
     'Neural Network and Deep Learning'
+  ]);
+
+  public profiles = signal([
+    {
+      name: 'GitHub',
+      url: this.contact().github,
+      icon: 'fab fa-github'
+    },
+    {
+      name: 'LinkedIn',
+      url: this.contact().linkedin,
+      icon: 'fab fa-linkedin'
+    },
+    {
+      name: 'LeetCode',
+      url: this.contact().leetcode,
+      icon: 'fas fa-code'
+    },
+    {
+      name: 'Codeforces',
+      url: this.contact().codeforces,
+      icon: 'fas fa-laptop-code'
+    },
+    {
+      name: 'CodeChef',
+      url: this.contact().Instagram,
+      icon: 'fa-brands fa-instagram'
+    },
+    {
+      name: 'CodeChef',
+      url: this.contact().Pinterest,
+      icon: 'fa-brands fa-pinterest'
+    }
   ]);
 }

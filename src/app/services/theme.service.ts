@@ -1,5 +1,5 @@
 
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, effect } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,13 @@ export class ThemeService {
 
   constructor() {
     this.loadTheme();
+    effect(() => {
+      if (this.isDarkMode()) {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+    });
   }
 
   public toggleTheme(): void {

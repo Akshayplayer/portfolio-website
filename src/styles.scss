@@ -1,3 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #6a1b9a;
+  --secondary-color: #7b1fa2;
+  --background-color: #f3e5f5;
+  --text-color: #333;
+  --card-background: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --timeline-item-shadow: 0 4px 15px var(--shadow-color);
+  --skill-tag-background: #e1bee7;
+  --skill-tag-text: #6a1b9a;
+  --skill-tag-text-light: #fff;
+}
+
+body.dark-mode {
+  --primary-color: #c0392b;
+  --secondary-color: #e74c3c;
+  --background-color: #1a1a1a;
+  --text-color: #ecf0f1;
+  --card-background: #2c3e50;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --timeline-item-shadow: 0 4px 15px var(--shadow-color);
+  --skill-tag-background: #c0392b;
+  --skill-tag-text: #ecf0f1;
+  --skill-tag-text-light: #fff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .section-title {
   text-align: center;
   font-size: 3rem;

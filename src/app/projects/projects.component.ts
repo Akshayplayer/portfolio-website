@@ -28,14 +28,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
   styles: `
     #projects {
       padding: 6rem 2rem;
-      background-color: #fff;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 4rem;
-      color: #333;
-      font-weight: 700;
+      background-color: var(--background-color);
     }
     .project-grid {
       display: grid;
@@ -45,9 +38,10 @@ import { PortfolioDataService } from '../portfolio-data.service';
       margin: 0 auto;
     }
     .project-card {
-      background-color: #fff;
+      background-color: var(--card-background);
+      color: var(--text-color);
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--timeline-item-shadow);
       padding: 2rem;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
@@ -56,10 +50,13 @@ import { PortfolioDataService } from '../portfolio-data.service';
       transform: translateY(-10px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
+    body.dark-mode .project-card:hover {
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+    }
     .project-card h3 {
       font-size: 1.8rem;
       margin-top: 0;
-      color: #007bff;
+      color: var(--primary-color);
     }
     .guide {
       font-size: 1.1rem;
@@ -67,7 +64,6 @@ import { PortfolioDataService } from '../portfolio-data.service';
       margin-bottom: 0.5rem;
     }
     .date {
-      color: #555;
       margin-bottom: 1.5rem;
       font-style: italic;
     }
@@ -86,7 +82,7 @@ import { PortfolioDataService } from '../portfolio-data.service';
       content: '\u2022';
       position: absolute;
       left: 0;
-      color: #007bff;
+      color: var(--primary-color);
     }
 `,
   changeDetection: ChangeDetectionStrategy.OnPush
